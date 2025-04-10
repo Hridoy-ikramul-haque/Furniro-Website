@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .products-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products-section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: #f8f8f8;
+      color: #000;
+      border-radius: 10px;
+      width: 250px;
+      overflow: hidden;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .product-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      border-radius: 30px;
+    }
+
+    .badge.new {
+      background: teal;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s;
+      color: white;
+    }
+
+    .overlay button {
+      background: white;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .overlay .actions span {
+      margin: 0 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .product-image:hover .overlay {
+      opacity: 1;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .product-info h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .product-info p {
+      margin: 5px 0 10px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .price {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .price .current {
+      font-weight: bold;
+    }
+
+    .price .old {
+      text-decoration: line-through;
+      color: #aaa;
+    }
+
+    .show-more {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: white;
+      color: goldenrod;
+      border: 1px solid goldenrod;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="products-section">
+    <h2>Our Products</h2>
+
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/250x200" alt="Product 1">
+          <span class="badge">-30%</span>
+          <div class="overlay">
+            <button>Add to cart</button>
+            <div class="actions">
+              <span>🔗 Share</span>
+              <span>🔄 Compare</span>
+              <span>♡ Like</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Syltherine</h3>
+          <p>Stylish cafe chair</p>
+          <div class="price">
+            <span class="current">Rp 2.500.000</span>
+            <span class="old">Rp 3.500.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/250x200" alt="Product 2">
+          <span class="badge new">New</span>
+          <div class="overlay">
+            <button>Add to cart</button>
+            <div class="actions">
+              <span>🔗 Share</span>
+              <span>🔄 Compare</span>
+              <span>♡ Like</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Respira</h3>
+          <p>Outdoor bar table</p>
+          <div class="price">
+            <span class="current">Rp 500.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://via.placeholder.com/250x200" alt="Product 3">
+          <span class="badge">-50%</span>
+          <div class="overlay">
+            <button>Add to cart</button>
+            <div class="actions">
+              <span>🔗 Share</span>
+              <span>🔄 Compare</span>
+              <span>♡ Like</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Pingky</h3>
+          <p>Cute bed set</p>
+          <div class="price">
+            <span class="current">Rp 7.000.000</span>
+            <span class="old">Rp 14.000.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards as needed -->
+
+    </div>
+
+    <button class="show-more">Show More</button>
+  </section>
+
+</body>
+</html>
